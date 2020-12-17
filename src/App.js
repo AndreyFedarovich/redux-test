@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={(e) => handleChange(e.target.value)}>Test</button>
+      <button onClick={() => handleChange()}>Test</button>
       {!!testDataList?.length && (
         <ul>
           {testDataList.map(({ title }) => (
