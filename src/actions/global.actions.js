@@ -1,3 +1,4 @@
+// Async Action
 export const updateValue = async (dispatch) => {
   const url = 'https://jsonplaceholder.typicode.com/todos'
   try {
@@ -9,7 +10,7 @@ export const updateValue = async (dispatch) => {
   }
 };
 
-
+// Sync Action
 // export const updateValue = (dispatch) => {
 //   dispatch({ type: 'global/update', payload: [{title: 'test'}]  });
 // };

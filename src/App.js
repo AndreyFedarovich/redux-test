@@ -3,18 +3,18 @@ import { updateValue } from "./actions/global.actions";
 
 const App = () => {
   const dispatch = useDispatch();
-  const test = useSelector((state) => state.global.value);
-  console.log('test: ',test )
-  const handleChange = (value) => {
+  const testDataList = useSelector((state) => state.global.value);
+
+  const handleChange = () => {
     updateValue(dispatch);
   };
 
   return (
     <div className="App">
       <button onClick={(e) => handleChange(e.target.value)}>Test</button>
-      {!!test?.length && (
+      {!!testDataList?.length && (
         <ul>
-          {test.map(({ title }) => (
+          {testDataList.map(({ title }) => (
             <li key={title}>{title}</li>
           ))}
         </ul>
